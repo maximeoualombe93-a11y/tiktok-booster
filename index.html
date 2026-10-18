@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TikTok Booster</title>
+<style>
+body{font-family:Arial,sans-serif;background:#111;color:#fff;margin:0;padding:16px}
+h1{color:#d4af37;text-align:center}
+input,button{width:100%;padding:14px;font-size:16px;border-radius:10px;border:0;margin-top:10px;box-sizing:border-box}
+button{background:#d4af37;font-weight:bold}
+.box{background:#222;border-radius:10px;padding:12px;margin-top:14px}
+h2{color:#d4af37;font-size:18px;margin:0 0 8px}
+p{margin:6px 0}
+</style>
+</head>
+<body>
+<h1>TikTok Booster</h1>
+<input id="sujet" placeholder="Sujet de ta vidéo (ex: foi, musique)">
+<button onclick="generer()">Générer</button>
+<div id="resultat"></div>
+<script>
+function esc(t){
+  return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function bloc(titre, lignes){
+  var h = '<div class="box"><h2>' + titre + '</h2>';
+  for(var i=0;i<lignes.length;i++){ h += "<p>" + lignes[i] + "</p>"; }
+  return h + "</div>";
+}
+function generer(){
+  var s = document.getElementById("sujet").value.trim();
+  if(!s){ alert("Écris d'abord le sujet de ta vidéo"); return; }
+  var e = esc(s);
+  var accroches = [
+    "Personne ne te dit ça sur " + e + "...",
+    "3 choses à savoir sur " + e + " avant de scroller",
+    "Regarde jusqu'à la fin : " + e
+  ];
+  var descriptions = [
+    e + " : regarde jusqu'à la fin 🔥 Dis-moi ton avis en commentaire !",
+    "Tu connaissais ça sur " + e + " ? Partage à quelqu'un qui en a besoin 🙏",
+    "Nouvelle vidéo sur " + e + " ✨ Abonne-toi pour ne rien rater !"
+  ];
+  var mots = s.toLowerCase().split(/\s+/).filter(function(m){ return m.length > 2; });
+  var tags = mots.map(function(m){ return "#" + m.replace(/[^\p{L}\p{N}]/gu, ""); });
+  tags = tags.concat(["#pourtoi", "#fyp", "#tiktokfrance", "#viral"]);
+  var calendrier = [
+    "Lundi : vidéo principale sur " + e,
+    "Mardi : une question à ta communauté",
+    "Mercredi : conseil rapide",
+    "Jeudi : témoignage ou histoire",
+    "Vendredi : vidéo plus longue",
+    "Samedi : réponds aux commentaires en vidéo",
+    "Dimanche : repos ou bilan de la semaine"
+  ];
+  document.getElementById("resultat").innerHTML =
+    bloc("Accroches", accroches) +
+    bloc("Descriptions", descriptions) +
+    bloc("Hashtags", [tags.join(" ")]) +
+    bloc("Calendrier de la semaine", calendrier);
+}
+</script>
+</body>
+</html>
