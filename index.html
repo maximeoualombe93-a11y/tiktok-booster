@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MAXIME Phoenix</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230B3D3A'/%3E%3Ctext x='32' y='46' font-size='38' text-anchor='middle'%3E🔥%3C/text%3E%3C/svg%3E">
+<title>MAXIME Phoenix Booster</title>
+<meta name="apple-mobile-web-app-title" content="MAXIME Phoenix">
+<meta name="theme-color" content="#0B3D3A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -16,7 +17,14 @@ header{position:sticky;top:0;z-index:5;background:var(--fond);display:flex;align
 header svg{width:46px;height:46px;flex:none}
 .nom{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:25px;line-height:1}
 .nom span{color:var(--orange)}
-.slogan{font-size:12px;opacity:.7;margin-top:3px}
+.slogan{font-size:11px;font-weight:600;letter-spacing:.4em;opacity:.75;margin-top:4px}
+.hero{background:radial-gradient(circle at 50% 0%,#14625D 0%,#0B3D3A 70%);border:1px solid rgba(255,209,102,.4);border-radius:24px;padding:26px 16px 22px;text-align:center;color:var(--fond);margin-bottom:18px}
+.gros{width:130px;height:130px}
+.hn{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:30px;line-height:1.1}
+.hn span{background:linear-gradient(90deg,#FF8A1F,#FFD166);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hb{letter-spacing:.55em;padding-left:.55em;font-size:12px;font-weight:600;color:#FFD166;margin-top:6px}
+.filet{height:1px;width:80px;margin:14px auto 10px;background:linear-gradient(90deg,transparent,#FFD166,transparent)}
+.hero p{margin:0;opacity:.85;font-size:14px}
 main{max-width:640px;margin:0 auto;padding:16px 16px calc(100px + env(safe-area-inset-bottom))}
 .vue{display:none}
 .vue.on{display:block}
@@ -50,20 +58,29 @@ nav button.on{opacity:1;background:var(--menthe)}
 </style>
 </head>
 <body>
-<header>
-<svg viewBox="0 0 64 64" role="img" aria-label="Logo MAXIME Phoenix">
-<defs><linearGradient id="gl" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#E8480C"/><stop offset="1" stop-color="#FFB703"/></linearGradient></defs>
-<rect width="64" height="64" rx="16" fill="#0B3D3A"/>
-<path d="M32 9c2 6 1 9-1 12 4-1 7-4 8-8 3 6 2 11-2 15 5-1 9-5 11-10 1 9-3 17-10 21l-6 8-6-8c-7-4-11-12-10-21 2 5 6 9 11 10-4-4-5-9-2-15 1 4 4 7 8 8-2-3-3-6-1-12z" fill="url(#gl)"/>
-<circle cx="32" cy="30" r="2.4" fill="#0B3D3A"/>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<defs><linearGradient id="or" gradientUnits="userSpaceOnUse" x1="0" y1="100" x2="0" y2="0"><stop offset="0" stop-color="#E8480C"/><stop offset=".55" stop-color="#FF8A1F"/><stop offset="1" stop-color="#FFD166"/></linearGradient></defs>
+<symbol id="phx" viewBox="0 0 100 100"><path id="phx-d" fill="url(#or)" d="M50 5C46 11 46 18 50 24C54 18 54 11 50 5ZM50 20C46 23 45 29 48 33L50 38L52 33C55 29 54 23 50 20ZM50 36C44 42 44 54 47 62L50 72L53 62C56 54 56 42 50 36ZM50 68C46 78 46 88 50 98C54 88 54 78 50 68ZM47 14C42 12 40 8 40 3C45 5 48 9 48 14ZM47 40C38 34 26 24 16 6C30 10 42 20 49 36ZM47 44C36 40 20 33 8 22C24 20 40 27 49 40ZM47 48C36 46 20 43 5 38C21 34 38 37 49 44ZM47 52C38 51 24 52 11 58C25 60 38 60 48 57ZM48 70C42 78 40 88 41 96C46 88 49 80 49 70ZM47 66C38 72 33 82 33 92C40 84 46 76 49 68ZM53 14C58 12 60 8 60 3C55 5 52 9 52 14ZM53 40C62 34 74 24 84 6C70 10 58 20 51 36ZM53 44C64 40 80 33 92 22C76 20 60 27 51 40ZM53 48C64 46 80 43 95 38C79 34 62 37 51 44ZM53 52C62 51 76 52 89 58C75 60 62 60 52 57ZM52 70C58 78 60 88 59 96C54 88 51 80 51 70ZM53 66C62 72 67 82 67 92C60 84 54 76 51 68Z"/></symbol>
 </svg>
-<div><div class="nom">MAXIME <span>Phoenix</span></div><div class="slogan">Crée. Promeus. Publie.</div></div>
+<header>
+<svg viewBox="0 0 100 100" role="img" aria-label="Logo MAXIME Phoenix Booster">
+<rect width="100" height="100" rx="22" fill="#0B3D3A"/>
+<circle cx="50" cy="50" r="45" fill="none" stroke="#FFD166" stroke-opacity=".45" stroke-width=".8"/>
+<use href="#phx" width="100" height="100"/>
+</svg>
+<div><div class="nom">MAXIME <span>Phoenix</span></div><div class="slogan">BOOSTER</div></div>
 </header>
 <main>
 
 <section id="v-accueil" class="vue on">
-<h1>Prêt à faire briller tes comptes ?</h1>
-<p class="sous">Choisis une catégorie pour commencer.</p>
+<div class="hero">
+<svg class="gros" viewBox="0 0 100 100" aria-hidden="true"><use href="#phx" width="100" height="100"/></svg>
+<div class="hn">MAXIME <span>Phoenix</span></div>
+<div class="hb">BOOSTER</div>
+<div class="filet"></div>
+<p>Crée. Promeus. Publie.</p>
+</div>
+<h2>Que veux-tu faire ?</h2>
 <div class="grille">
 <button class="carte" onclick="aller('creer')"><b>✨</b><strong>Créer</strong>Accroches, descriptions, hashtags</button>
 <button class="carte" onclick="aller('promouvoir')"><b>🚀</b><strong>Promouvoir</strong>Plan et checklist par compte</button>
@@ -266,6 +283,25 @@ function vider(){
   for(var i=0;i<JOURS.length;i++){ $("j"+i).value=""; }
   saveCal();
 }
+
+
+/* ---------- Icône (écran d’accueil et onglet) ---------- */
+(function(){
+  try{
+    var c=document.createElement("canvas"); c.width=180; c.height=180;
+    var x=c.getContext("2d");
+    x.fillStyle="#0B3D3A"; x.fillRect(0,0,180,180);
+    x.translate(18,18); x.scale(1.44,1.44);
+    var g=x.createLinearGradient(0,100,0,0);
+    g.addColorStop(0,"#E8480C"); g.addColorStop(.55,"#FF8A1F"); g.addColorStop(1,"#FFD166");
+    x.fillStyle=g;
+    x.fill(new Path2D($("phx-d").getAttribute("d")));
+    var u=c.toDataURL("image/png");
+    ["apple-touch-icon","icon"].forEach(function(r){
+      var l=document.createElement("link"); l.rel=r; l.href=u; document.head.appendChild(l);
+    });
+  }catch(e){}
+})();
 
 /* ---------- Démarrage ---------- */
 (function(){
