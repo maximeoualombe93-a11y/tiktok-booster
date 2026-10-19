@@ -4,18 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TikTok Booster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-body{font-family:Arial,sans-serif;background:#111;color:#fff;margin:0;padding:16px}
-h1{color:#d4af37;text-align:center}
-input,button{width:100%;padding:14px;font-size:16px;border-radius:10px;border:0;margin-top:10px;box-sizing:border-box}
-button{background:#d4af37;font-weight:bold}
-.box{background:#222;border-radius:10px;padding:12px;margin-top:14px}
-h2{color:#d4af37;font-size:18px;margin:0 0 8px}
-p{margin:6px 0}
+:root{--fond:#FBF6EE;--teal:#0B3D3A;--orange:#E8480C;--menthe:#DDF3E8}
+*{box-sizing:border-box}
+body{font-family:'Inter',Arial,sans-serif;background:var(--fond);color:var(--teal);margin:0;padding:20px 16px 40px;max-width:600px;margin-inline:auto}
+h1{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:40px;line-height:1.05;margin:24px 0 6px}
+h1 span{color:var(--orange)}
+.sous{margin:0 0 22px;font-size:16px;opacity:.8}
+input,button{width:100%;padding:16px;font-size:16px;font-family:inherit;border-radius:14px;margin-top:10px}
+input{border:2px solid var(--teal);background:#fff;color:var(--teal)}
+input:focus{outline:3px solid var(--menthe)}
+button{border:0;background:var(--orange);color:#fff;font-weight:600;font-size:17px;cursor:pointer}
+button:active{transform:scale(.98)}
+.box{background:#fff;border:1px solid var(--menthe);border-left:6px solid var(--orange);border-radius:14px;padding:14px 16px;margin-top:16px}
+h2{font-family:'Bricolage Grotesque',Arial,sans-serif;font-weight:800;font-size:20px;margin:0 0 8px}
+p{margin:8px 0;line-height:1.45}
 </style>
 </head>
 <body>
-<h1>TikTok Booster</h1>
+<h1>TikTok <span>Booster</span></h1>
+<p class="sous">Accroches, descriptions, hashtags et calendrier pour tes vidéos.</p>
 <input id="sujet" placeholder="Sujet de ta vidéo (ex: foi, musique)">
 <button onclick="generer()">Générer</button>
 <div id="resultat"></div>
